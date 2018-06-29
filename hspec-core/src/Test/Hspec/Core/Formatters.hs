@@ -48,6 +48,7 @@ module Test.Hspec.Core.Formatters (
 , withPendingColor
 , withFailColor
 
+, useDiff
 , extraChunk
 , missingChunk
 
@@ -95,6 +96,7 @@ import Test.Hspec.Core.Formatters.Monad (
   , withPendingColor
   , withFailColor
 
+  , useDiff
   , extraChunk
   , missingChunk
   )
@@ -210,7 +212,11 @@ defaultFailedFormatter = do
         ExpectedButGot preface expected actual -> do
           mapM_ indent preface
 
-          let chunks = diff expected actual
+          b <- useDiff
+          let
+            chunks
+              | b = diff expected actual
+              | otherwise = [First expected, Second actual]
 
           withFailColor $ write (indentation ++ "expected: ")
           forM_ chunks $ \chunk -> case chunk of
