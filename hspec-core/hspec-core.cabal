@@ -1,10 +1,10 @@
 cabal-version: >= 1.10
 
--- This file has been generated from package.yaml by hpack version 0.29.5.
+-- This file has been generated from package.yaml by hpack version 0.30.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 18722f32fa5f70fec923fb16bae44075fdcc96cfab7622d6d9146d22fb7faed5
+-- hash: 5775206fc3ad33d1ce9667ae51bab6c82c198a20022eb5979d64e970890b2362
 
 name:             hspec-core
 version:          2.5.5
@@ -161,3 +161,4 @@ test-suite spec
       Test.Hspec.Core.UtilSpec
       Paths_hspec_core
   default-language: Haskell2010
+  build-tool-depends: hspec-meta:hspec-meta-discover

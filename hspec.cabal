@@ -1,10 +1,10 @@
 cabal-version: >= 1.10
 
--- This file has been generated from package.yaml by hpack version 0.29.5.
+-- This file has been generated from package.yaml by hpack version 0.30.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 32bbd6cd6fd8f6f99fe71a657a2c4674beba6789814e8c4138b399d69a8c02e4
+-- hash: 8eee403478b108d6c01bad5e1d4ffa5ece3fd9fe565e836e9709ebab92d929da
 
 name:             hspec
 version:          2.5.5
@@ -83,6 +83,7 @@ test-suite spec
     , hspec-meta >=2.3.2
     , stringbuilder
     , transformers >=0.2.2.0
+  build-tool-depends: hspec-meta:hspec-meta-discover
   other-modules:
       Paths_hspec
   default-language: Haskell2010

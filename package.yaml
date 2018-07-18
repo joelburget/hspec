@@ -49,6 +49,8 @@ library:
     - Test.Hspec.Formatters
     - Test.Hspec.QuickCheck
     - Test.Hspec.Runner
+  verbatim:
+    build-tool-depends: null
 
 tests:
   spec:
@@ -59,3 +61,5 @@ tests:
       - directory
       - stringbuilder
       - hspec-meta >= 2.3.2
+    verbatim:
+      build-tool-depends: hspec-meta:hspec-meta-discover

@@ -61,3 +61,5 @@ tests:
       - silently >= 1.2.4
       - process
       - temporary
+    verbatim:
+      build-tool-depends: hspec-meta:hspec-meta-discover
